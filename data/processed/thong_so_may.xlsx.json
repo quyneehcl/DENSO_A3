@@ -1,0 +1,50 @@
+[
+  {
+    "chunk_id": "doc006_chunk001",
+    "text": "Model là MX-200, thông số điện - Điện áp (V) là 380, thông số điện - Tần số (Hz) là 50, thông số điện - Công suất (kW) là 22, lực kẹp (tấn) là 200, ngày lắp đặt là 2021-05-14.",
+    "source_file": "thong_so_may.xlsx",
+    "location": "Máy ép nhựa, hàng 3",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc006_chunk002",
+    "text": "Model là MX-350, thông số điện - Điện áp (V) là 380, thông số điện - Tần số (Hz) là 50, thông số điện - Công suất (kW) là 37, lực kẹp (tấn) là 350, ngày lắp đặt là 2022-08-02.",
+    "source_file": "thong_so_may.xlsx",
+    "location": "Máy ép nhựa, hàng 4",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc006_chunk003",
+    "text": "Model là MX-500, thông số điện - Điện áp (V) là 380, thông số điện - Tần số (Hz) là 50, thông số điện - Công suất (kW) là 55.5, lực kẹp (tấn) là 500, ngày lắp đặt là 2023-01-20.",
+    "source_file": "thong_so_may.xlsx",
+    "location": "Máy ép nhựa, hàng 5",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc006_chunk004",
+    "text": "Mã máy là CNC-01, loại máy là Phay đứng, tốc độ trục chính (vòng/phút) là 12000, hành trình (mm) là 800 x 500 x 500, bộ điều khiển là Fanuc 0i-MF.",
+    "source_file": "thong_so_may.xlsx",
+    "location": "Máy CNC, hàng 2",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc006_chunk005",
+    "text": "Mã máy là CNC-02, loại máy là Tiện, tốc độ trục chính (vòng/phút) là 4500, hành trình (mm) là Ø300 x 600, bộ điều khiển là Fanuc 0i-TF.",
+    "source_file": "thong_so_may.xlsx",
+    "location": "Máy CNC, hàng 3",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc006_chunk006",
+    "text": "Mã máy là CNC-03, loại máy là Phay đứng, tốc độ trục chính (vòng/phút) là 15000, hành trình (mm) là 1000 x 600 x 600, bộ điều khiển là Siemens 828D.",
+    "source_file": "thong_so_may.xlsx",
+    "location": "Máy CNC, hàng 4",
+    "doc_type": "excel_table",
+    "language": "vi"
+  }
+]

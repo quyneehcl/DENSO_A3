@@ -1,0 +1,42 @@
+{
+  "paragraphs": [
+    "HƯỚNG DẪN VẬN HÀNH MÁY NÉN KHÍ",
+    "Máy nén khí trục vít cung cấp khí nén cho toàn bộ xưởng lắp ráp. Áp suất làm việc tiêu chuẩn là 7 bar, áp suất tối đa không vượt quá 8 bar.",
+    "Khởi động máy",
+    "Kiểm tra mức dầu qua kính thăm dầu, mức dầu phải nằm giữa hai vạch đỏ. Mở van xả nước ngưng trong bình chứa, sau đó đóng lại. Nhấn nút khởi động và theo dõi áp suất tăng dần trên đồng hồ.",
+    "Bảng thông số giám sát",
+    "Dừng máy",
+    "Nhấn nút dừng, máy sẽ chạy không tải khoảng 30 giây trước khi dừng hẳn. Không ngắt nguồn điện chính khi máy đang trong chu trình dừng."
+  ],
+  "tables": [
+    {
+      "headers": [
+        "Thông số",
+        "Giá trị bình thường",
+        "Ngưỡng cảnh báo"
+      ],
+      "rows": [
+        [
+          "Áp suất đầu ra",
+          "7 bar",
+          "Trên 8 bar"
+        ],
+        [
+          "Nhiệt độ dầu",
+          "80 độ C",
+          "Trên 105 độ C"
+        ],
+        [
+          "Dòng điện động cơ",
+          "45 A",
+          "Trên 52 A"
+        ],
+        [
+          "Chênh áp lọc tách dầu",
+          "0.3 bar",
+          "Trên 1 bar"
+        ]
+      ]
+    }
+  ]
+}

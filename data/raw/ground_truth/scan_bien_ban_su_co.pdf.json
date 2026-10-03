@@ -1,0 +1,42 @@
+{
+  "paragraphs": [
+    "BIÊN BẢN SỰ CỐ THIẾT BỊ",
+    "Ngày 12 tháng 3 năm 2025, lúc 9 giờ 40 phút, máy CNC số 3 tại xưởng gia công dừng đột ngột và hiển thị mã lỗi AL-214 trên màn hình điều khiển.",
+    "Mô tả sự cố",
+    "Người vận hành nghe tiếng kêu bất thường từ trục chính trước khi máy dừng. Kiểm tra sơ bộ cho thấy nhiệt độ ổ bi trục chính tăng lên 78 độ C, vượt ngưỡng cho phép là 65 độ C.",
+    "Các bước đã xử lý",
+    "Kết luận",
+    "Nguyên nhân là do thiếu mỡ bôi trơn ổ bi. Đề xuất bổ sung hạng mục kiểm tra mỡ trục chính vào lịch bảo dưỡng hàng tuần."
+  ],
+  "tables": [
+    {
+      "headers": [
+        "Thời gian",
+        "Hành động",
+        "Người thực hiện"
+      ],
+      "rows": [
+        [
+          "09:45",
+          "Ngắt nguồn và khóa máy",
+          "Trưởng ca"
+        ],
+        [
+          "10:10",
+          "Kiểm tra ổ bi trục chính",
+          "Kỹ sư cơ khí"
+        ],
+        [
+          "11:30",
+          "Thay ổ bi và bơm mỡ",
+          "Kỹ thuật viên"
+        ],
+        [
+          "14:00",
+          "Chạy thử không tải",
+          "Kỹ sư cơ khí"
+        ]
+      ]
+    }
+  ]
+}

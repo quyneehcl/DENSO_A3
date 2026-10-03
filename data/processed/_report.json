@@ -1,0 +1,71 @@
+{
+  "ocr_backend": "tesseract",
+  "summary": {
+    "pdf_text": {
+      "files": 2,
+      "avg_seconds": 0.068
+    },
+    "pdf_scan": {
+      "files": 2,
+      "avg_seconds": 10.149
+    },
+    "excel": {
+      "files": 2,
+      "avg_seconds": 0.046
+    }
+  },
+  "files": [
+    {
+      "file": "bang_ma_loi.xlsx",
+      "doc_id": "doc001",
+      "category": "excel",
+      "seconds": 0.075,
+      "chunks": 11,
+      "errors": []
+    },
+    {
+      "file": "huong_dan_bao_tri.pdf",
+      "doc_id": "doc002",
+      "category": "pdf_text",
+      "seconds": 0.1,
+      "chunks": 17,
+      "errors": [],
+      "ocr_backend": null
+    },
+    {
+      "file": "quy_trinh_kiem_tra.pdf",
+      "doc_id": "doc003",
+      "category": "pdf_text",
+      "seconds": 0.035,
+      "chunks": 10,
+      "errors": [],
+      "ocr_backend": null
+    },
+    {
+      "file": "scan_bien_ban_su_co.pdf",
+      "doc_id": "doc004",
+      "category": "pdf_scan",
+      "seconds": 8.076,
+      "chunks": 8,
+      "errors": [],
+      "ocr_backend": "tesseract"
+    },
+    {
+      "file": "scan_huong_dan_van_hanh.pdf",
+      "doc_id": "doc005",
+      "category": "pdf_scan",
+      "seconds": 12.223,
+      "chunks": 8,
+      "errors": [],
+      "ocr_backend": "tesseract"
+    },
+    {
+      "file": "thong_so_may.xlsx",
+      "doc_id": "doc006",
+      "category": "excel",
+      "seconds": 0.017,
+      "chunks": 6,
+      "errors": []
+    }
+  ]
+}
