@@ -1,0 +1,8 @@
+# Core ingest (CPU only)
+pandas>=2.0
+openpyxl>=3.1
+PyMuPDF>=1.24
+Pillow>=10.0
+pytesseract>=0.3.10   # OCR fallback; needs system package: tesseract-ocr tesseract-ocr-vie
+pytest>=7.0
+# PaddleOCR-VL (GPU, on-prem) is listed separately: see requirements-paddle.txt
