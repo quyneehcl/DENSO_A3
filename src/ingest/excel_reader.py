@@ -17,7 +17,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from .schema import Chunk, default_doc_id, detect_language, make_chunk_id
+from .schema import Chunk, default_doc_id, source_name, detect_language, make_chunk_id
 from .table_utils import format_cell, row_to_sentence, split_header
 
 log = logging.getLogger(__name__)
@@ -155,7 +155,7 @@ def read_excel(path: str | Path, doc_id: str | None = None, start_index: int = 1
                 Chunk(
                     chunk_id=make_chunk_id(doc_id, start_index + len(chunks)),
                     text=text,
-                    source_file=path.name,
+                    source_file=source_name(path),
                     location=f"{sheet.name}, hàng {tr.row_number}",
                     doc_type=DOC_TYPE,
                     language=lang,

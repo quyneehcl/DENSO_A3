@@ -71,3 +71,15 @@ def test_pandas_path_keeps_row_numbers(tmp_path):
     chunks = read_excel(p, doc_id="d")
     assert [c.location for c in chunks] == ["S1, hàng 4", "S1, hàng 5"]
     assert chunks[1].text == "Mã là A2."
+
+
+def test_source_file_is_nfc(tmp_path):
+    import unicodedata
+
+    nfd = unicodedata.normalize("NFD", "Bảng mã lỗi.xlsx")   # how macOS stores the name
+    wb = Workbook()
+    wb.active.append(["Mã", "Mô tả"])
+    wb.active.append(["E1", "Quá nhiệt"])
+    wb.save(tmp_path / nfd)
+    chunks = read_excel(tmp_path / nfd, doc_id="d")
+    assert chunks[0].source_file == unicodedata.normalize("NFC", "Bảng mã lỗi.xlsx")

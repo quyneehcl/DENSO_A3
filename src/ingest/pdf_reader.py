@@ -15,7 +15,7 @@ from statistics import median
 import pymupdf
 
 from .blocks import TABLE, TEXT, TITLE, Block, blocks_to_chunks, join_lines, merge_across_pages
-from .schema import Chunk, default_doc_id
+from .schema import Chunk, default_doc_id, source_name
 
 log = logging.getLogger(__name__)
 if hasattr(pymupdf, "no_recommend_layout"):  # silence the "use pymupdf_layout" notice
@@ -164,5 +164,5 @@ def read_pdf(path: str | Path, doc_id: str | None = None, ocr_backend: str = "au
              start_index: int = 1) -> list[Chunk]:
     path = Path(path)
     blocks = read_pdf_blocks(path, ocr_backend=ocr_backend, min_chars=min_chars, dpi=dpi)
-    return blocks_to_chunks(blocks, doc_id or default_doc_id(path), path.name,
+    return blocks_to_chunks(blocks, doc_id or default_doc_id(path), source_name(path),
                             max_chars=max_chars, start_index=start_index)

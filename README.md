@@ -134,16 +134,25 @@ Lệnh cài paddlepaddle-gpu có thể thay đổi theo phiên bản; nếu lỗ
   (hỗ trợ ô gộp ngang/dọc) rồi OCR từng ô, phần văn bản còn lại ghép đoạn theo khoảng cách dòng.
   Hạn chế: bảng không kẻ ô sẽ ra dạng văn bản; tiêu đề in hoa đậm hay mất dấu.
 
-## Kết quả trên bộ mẫu (Tesseract, CPU, không GPU)
+## Kết quả trên bộ mẫu
 
-| Loại      | Đoạn văn tìm thấy | Hàng bảng đúng chính xác | Thời gian TB/file |
-|-----------|-------------------|--------------------------|-------------------|
+| Loại | Đoạn văn tìm thấy | Hàng bảng đúng chính xác | Thời gian TB/file |
+|------|-------------------|--------------------------|-------------------|
 | PDF digital (2 file) | 20/20 | 18/18 | ~0.07 s |
-| PDF scan (2 file)    | 13/14 | 7/8   | ~10 s   |
 | Excel (2 file)       | –     | 17/17 | ~0.05 s |
+| PDF scan – Tesseract (CPU)          | 13/14 | 7/8 | ~10 s |
+| PDF scan – PaddleOCR-VL 1.6 (Colab T4) | 11/14 | 4/8 | ~22 s |
 
-Lỗi còn lại ở PDF scan đều do OCR: tiêu đề in hoa đậm mất dấu (`BIEN BAN SỰ CO`), `45 A` đọc thành `45A`.
-PaddleOCR-VL chưa được chạy thử trong môi trường build (không có GPU). Code đã sẵn sàng, cần chạy
-`scripts/run_ingest.py --ocr-backend paddle_vl` trên máy có GPU để đo lại.
+Trên bộ scan mẫu (ảnh tự làm nhiễu/mờ/nén JPEG):
+- PaddleOCR-VL tách bố cục (tiêu đề / đoạn / bảng) chuẩn, nhưng **đọc sai dấu tiếng Việt** nhiều hơn Tesseract
+  (`CỐ`→`CÓ`, `dừng`→`dùng`, `Ngưỡng`→`Nguồng`...). Một chữ sai trong header bảng làm cả 4 hàng của bảng đó không khớp.
+- Tesseract: tiêu đề in hoa đậm hay mất dấu (`BIEN BAN SỰ CO`), `45 A` → `45A`; không đọc được bảng không kẻ ô.
+- Bộ scan mẫu là giả lập → cần so 2 backend trên vài trang scan thật (trên máy nội bộ) trước khi chọn.
+
+Ghi chú khi chạy PaddleOCR-VL trên Colab:
+- Cài `paddlepaddle-gpu` có thể làm hỏng PyTorch của Colab (`undefined symbol: ncclCommWindowDeregister`):
+  chạy `pip install -U "nvidia-nccl-cu12>=2.27"` rồi **Runtime → Restart session**.
+- Không nạp model trong notebook rồi lại chạy `!python scripts/run_ingest.py` — hai bản model không vừa GPU 16GB
+  (`Out of memory`). Restart session trước khi chạy script.
 
 Dữ liệu mẫu là nội dung kỹ thuật **tự tạo** (không phải tài liệu thật). Cần thay bằng tài liệu thật để đánh giá chính xác.

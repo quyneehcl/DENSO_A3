@@ -54,6 +54,18 @@ class _FakeVL:
         ]}}]
 
 
+class _FakeVLTwoPages:
+    """Real PaddleOCR-VL 1.6 output: a lone paragraph on page 2 labelled 'aside_text'."""
+
+    def predict(self, path):
+        if path.endswith("page_1.png"):
+            items = [{"block_label": "text", "block_content": "Áp suất tối đa 8 bar."},
+                     {"block_label": "paragraph_title", "block_content": "Dừng máy"}]
+        else:
+            items = [{"block_label": "aside_text", "block_content": "Nhấn nút dừng, máy chạy không tải 30 giây."}]
+        return [{"res": {"parsing_res_list": items}}]
+
+
 def test_paddle_vl_result_parsing():
     backend = PaddleOCRVLBackend.__new__(PaddleOCRVLBackend)
     backend.pipeline = _FakeVL()
@@ -94,3 +106,32 @@ def test_tesseract_scan_end_to_end():
 
 def test_backend_none_skips_scans():
     assert ocr_pipeline.get_backend("none") is None
+
+
+def test_failed_backend_is_not_reloaded(monkeypatch):
+    calls = []
+
+    def boom(**kw):
+        calls.append(1)
+        raise ImportError("libtorch_cuda.so: undefined symbol")
+
+    monkeypatch.setattr(ocr_pipeline, "PaddleOCRVLBackend", boom)
+    monkeypatch.setattr(ocr_pipeline, "_FAILED", {})
+    monkeypatch.setattr(ocr_pipeline, "_BACKENDS", {})
+    with pytest.raises(ImportError):
+        ocr_pipeline.get_backend("paddle_vl")
+    with pytest.raises(RuntimeError, match="undefined symbol"):
+        ocr_pipeline.get_backend("paddle_vl")
+    assert len(calls) == 1
+
+
+def test_paddle_vl_keeps_aside_text_and_carries_title():
+    from PIL import Image
+
+    backend = PaddleOCRVLBackend.__new__(PaddleOCRVLBackend)
+    backend.pipeline = _FakeVLTwoPages()
+    img = Image.new("RGB", (20, 20), "white")
+    blocks = backend.recognize(img, 1) + backend.recognize(img, 2)
+    chunks = blocks_to_chunks(merge_across_pages(blocks), "doc005", "scan.pdf")
+    assert chunks[-1].text == "Dừng máy\nNhấn nút dừng, máy chạy không tải 30 giây."
+    assert chunks[-1].location == "Trang 1-2"
