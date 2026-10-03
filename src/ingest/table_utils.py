@@ -181,3 +181,21 @@ def html_tables_to_rows(html: str) -> list[list[list[str]]]:
     p = _HTMLTableParser()
     p.feed(html)
     return [t for t in p.tables if t]
+
+
+def markdown_table_to_rows(md: str) -> list[list[list[str]]]:
+    """Parse pipe tables ("| a | b |") into rows; separator lines (|---|) are dropped."""
+    tables, cur = [], []
+    for line in md.splitlines():
+        line = line.strip()
+        if line.startswith("|") and line.endswith("|") and len(line) > 1:
+            cells = [c.strip() for c in line[1:-1].split("|")]
+            if all(re.fullmatch(r":?-{2,}:?", c) for c in cells if c):
+                continue
+            cur.append(cells)
+        elif cur:
+            tables.append(cur)
+            cur = []
+    if cur:
+        tables.append(cur)
+    return [t for t in tables if t]
