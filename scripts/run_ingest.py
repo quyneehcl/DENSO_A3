@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import re
 import sys
 import time
 from pathlib import Path
@@ -23,6 +24,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from ingest.ocr_pipeline import get_backend  # noqa: E402
 from ingest.pipeline import SUPPORTED_EXT, file_category, ingest_file  # noqa: E402
 from ingest.schema import validate_chunks, write_chunks  # noqa: E402
+
+
+def short_error(e: Exception) -> str:
+    """One readable line for the report (native libraries put pages of C++ traceback in the message)."""
+    lines = [l.strip() for l in str(e).splitlines() if l.strip()]
+    useful = [l for l in lines if len(l) > 20 and not l.startswith(("---", "C++", "(at "))
+              and re.search(r"error|memory|not found|cannot|no module|undefined", l, re.I)]
+    msg = useful[-1] if useful else (lines[0] if lines else "")
+    return f"{type(e).__name__}: {msg[:300]}"
 
 
 def load_manifest(path: Path) -> dict[str, str]:
@@ -80,7 +90,7 @@ def main() -> int:
             all_chunks += chunks
         except Exception as e:  # keep going with the other files
             logging.exception("failed: %s", f.name)
-            entry["errors"] = [f"{type(e).__name__}: {e}"]
+            entry["errors"] = [short_error(e)]
             (out / f"{f.name}.json").unlink(missing_ok=True)  # never leave a stale output behind
         failed += bool(entry["errors"])
         report.append(entry)
