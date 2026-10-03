@@ -49,8 +49,11 @@ class PaddleOCRVLBackend(OCRBackend):
     """PaddleOCR-VL document parsing (PaddleOCR >= 3.3)."""
 
     name = "paddle_vl"
-    SKIP = {"header", "footer", "number", "header_image", "footer_image", "seal", "image",
-            "figure", "aside_text", "footnote", "vision_footnote"}
+    # page furniture without useful text; every other label that carries text is kept
+    # (e.g. a lone paragraph can be labelled "aside_text" by the layout model)
+    SKIP = {"header_image", "footer_image", "seal", "image", "figure"}
+    RUNNING = {"header", "footer", "number"}   # dropped only when short (running header, page no.)
+    RUNNING_MAX_CHARS = 60
     TITLES = {"doc_title", "paragraph_title", "title", "figure_title", "table_title", "chart_title"}
 
     def __init__(self, use_doc_orientation_classify: bool = True, use_doc_unwarping: bool = False,
@@ -92,6 +95,8 @@ class PaddleOCRVLBackend(OCRBackend):
                 bbox = item.get("block_bbox") or item.get("bbox")
                 bbox = tuple(float(v) for v in bbox[:4]) if bbox is not None and len(bbox) >= 4 else None
                 if not content or label in self.SKIP:
+                    continue
+                if label in self.RUNNING and len(content) <= self.RUNNING_MAX_CHARS:
                     continue
                 if label == "table":
                     tables = html_tables_to_rows(content) or markdown_table_to_rows(content)
