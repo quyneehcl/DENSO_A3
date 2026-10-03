@@ -43,6 +43,12 @@ def make_chunk_id(doc_id: str, index: int) -> str:
     return f"{doc_id}_chunk{index:03d}"
 
 
+def source_name(path: str | Path) -> str:
+    """File name in NFC form: macOS stores accented names decomposed (NFD), which would make
+    the same Vietnamese file name compare unequal in later stages."""
+    return unicodedata.normalize("NFC", Path(path).name)
+
+
 def default_doc_id(path: str | Path) -> str:
     """Stable doc id derived from the file name (ASCII slug)."""
     stem = Path(path).stem

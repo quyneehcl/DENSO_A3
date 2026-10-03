@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from ingest.ocr_pipeline import get_backend  # noqa: E402
 from ingest.pipeline import SUPPORTED_EXT, file_category, ingest_file  # noqa: E402
-from ingest.schema import validate_chunks, write_chunks  # noqa: E402
+from ingest.schema import source_name, validate_chunks, write_chunks  # noqa: E402
 
 
 def short_error(e: Exception) -> str:
@@ -43,8 +43,8 @@ def assign_doc_ids(files: list[Path], manifest: dict[str, str]) -> dict[str, str
     used = {int(v[3:]) for v in manifest.values() if v.startswith("doc") and v[3:].isdigit()}
     nxt = max(used, default=0) + 1
     for f in files:
-        if f.name not in manifest:
-            manifest[f.name] = f"doc{nxt:03d}"
+        if source_name(f) not in manifest:
+            manifest[source_name(f)] = f"doc{nxt:03d}"
             nxt += 1
     return manifest
 
@@ -72,29 +72,30 @@ def main() -> int:
     ocr_name = None
     report, all_chunks, failed = [], [], 0
     for f in files:
-        entry = {"file": f.name, "doc_id": manifest[f.name]}
+        name = source_name(f)
+        entry = {"file": name, "doc_id": manifest[name]}
         try:
             entry["category"] = file_category(f)
             if entry["category"] in ("pdf_scan", "pdf_mixed") and ocr_name is None:
                 backend = get_backend(args.ocr_backend)
                 ocr_name = backend.name if backend else "none"
             t0 = time.perf_counter()
-            chunks = [c.to_dict() for c in ingest_file(f, manifest[f.name], ocr_backend=args.ocr_backend,
+            chunks = [c.to_dict() for c in ingest_file(f, manifest[name], ocr_backend=args.ocr_backend,
                                                        max_chars=args.max_chars, dpi=args.dpi)]
             entry["seconds"] = round(time.perf_counter() - t0, 3)
             entry["chunks"] = len(chunks)
             entry["errors"] = validate_chunks(chunks)
             if entry["category"] != "excel":
                 entry["ocr_backend"] = ocr_name if entry["category"] != "pdf_text" else None
-            write_chunks(chunks, out / f"{f.name}.json")
+            write_chunks(chunks, out / f"{name}.json")
             all_chunks += chunks
         except Exception as e:  # keep going with the other files
             logging.exception("failed: %s", f.name)
             entry["errors"] = [short_error(e)]
-            (out / f"{f.name}.json").unlink(missing_ok=True)  # never leave a stale output behind
+            (out / f"{name}.json").unlink(missing_ok=True)  # never leave a stale output behind
         failed += bool(entry["errors"])
         report.append(entry)
-        print(f"{entry['doc_id']}  {f.name:<35} {entry.get('category', '?'):<10} "
+        print(f"{entry['doc_id']}  {name:<35} {entry.get('category', '?'):<10} "
               f"{entry.get('chunks', 0):>4} chunks  {entry.get('seconds', 0):>7.2f}s"
               + ("  ERRORS: " + "; ".join(entry["errors"][:3]) if entry["errors"] else ""))
 
