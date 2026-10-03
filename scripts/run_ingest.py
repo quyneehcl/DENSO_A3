@@ -84,10 +84,13 @@ def main() -> int:
                                                        max_chars=args.max_chars, dpi=args.dpi)]
             entry["seconds"] = round(time.perf_counter() - t0, 3)
             entry["chunks"] = len(chunks)
-            entry["errors"] = validate_chunks(chunks)
+            entry["errors"] = validate_chunks(chunks) or ([] if chunks else ["no content extracted (0 chunks)"])
             if entry["category"] != "excel":
                 entry["ocr_backend"] = ocr_name if entry["category"] != "pdf_text" else None
-            write_chunks(chunks, out / f"{name}.json")
+            if chunks:
+                write_chunks(chunks, out / f"{name}.json")
+            else:
+                (out / f"{name}.json").unlink(missing_ok=True)
             all_chunks += chunks
         except Exception as e:  # keep going with the other files
             logging.exception("failed: %s", f.name)
@@ -106,7 +109,8 @@ def main() -> int:
 
     summary = {}
     for cat in ("pdf_text", "pdf_scan", "pdf_mixed", "excel"):
-        times = [r["seconds"] for r in report if r.get("category") == cat and "seconds" in r]
+        times = [r["seconds"] for r in report
+                 if r.get("category") == cat and "seconds" in r and not r["errors"]]
         if times:
             summary[cat] = {"files": len(times), "avg_seconds": round(sum(times) / len(times), 3)}
     (out / "_report.json").write_text(json.dumps({"ocr_backend": ocr_name, "summary": summary, "files": report},
