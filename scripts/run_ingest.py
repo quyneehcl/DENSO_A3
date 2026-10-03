@@ -81,6 +81,7 @@ def main() -> int:
         except Exception as e:  # keep going with the other files
             logging.exception("failed: %s", f.name)
             entry["errors"] = [f"{type(e).__name__}: {e}"]
+            (out / f"{f.name}.json").unlink(missing_ok=True)  # never leave a stale output behind
         failed += bool(entry["errors"])
         report.append(entry)
         print(f"{entry['doc_id']}  {f.name:<35} {entry.get('category', '?'):<10} "

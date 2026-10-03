@@ -94,6 +94,10 @@ def main() -> int:
     for gt_file in sorted(gt_dir.glob("*.json")):
         name = gt_file.name[:-5]
         out_file = out_dir / f"{name}.json"
+        last = meta.get(name, {})
+        if last.get("errors") and "seconds" not in last:
+            print(f"!! {name}: FAILED in the last run_ingest.py run -> {last['errors'][0]}")
+            continue
         if not out_file.exists():
             print(f"!! {name}: no output (run scripts/run_ingest.py first)")
             continue
