@@ -1,0 +1,103 @@
+{
+  "summary": {
+    "pdf_text": {
+      "files": 2,
+      "paragraphs_found": "20/20",
+      "table_rows_exact": "18/18",
+      "avg_seconds": 0.068
+    },
+    "pdf_scan": {
+      "files": 2,
+      "paragraphs_found": "13/14",
+      "table_rows_exact": "7/8",
+      "avg_seconds": 10.149
+    },
+    "excel": {
+      "files": 2,
+      "table_rows_exact": "17/17",
+      "avg_seconds": 0.046
+    }
+  },
+  "files": {
+    "bang_ma_loi.xlsx": {
+      "format_errors": [],
+      "table_rows": 11,
+      "table_rows_exact": 11,
+      "table_row_similarity": 1.0,
+      "table_rows_wrong": [],
+      "extra_table_chunks": 0,
+      "category": "excel",
+      "seconds": 0.075
+    },
+    "huong_dan_bao_tri.pdf": {
+      "format_errors": [],
+      "paragraphs": 11,
+      "paragraphs_found": 11,
+      "text_word_recall": 1.0,
+      "missing_paragraphs": [],
+      "table_rows": 12,
+      "table_rows_exact": 12,
+      "table_row_similarity": 1.0,
+      "table_rows_wrong": [],
+      "extra_table_chunks": 0,
+      "category": "pdf_text",
+      "seconds": 0.1
+    },
+    "quy_trinh_kiem_tra.pdf": {
+      "format_errors": [],
+      "paragraphs": 9,
+      "paragraphs_found": 9,
+      "text_word_recall": 1.0,
+      "missing_paragraphs": [],
+      "table_rows": 6,
+      "table_rows_exact": 6,
+      "table_row_similarity": 1.0,
+      "table_rows_wrong": [],
+      "extra_table_chunks": 0,
+      "category": "pdf_text",
+      "seconds": 0.035
+    },
+    "scan_bien_ban_su_co.pdf": {
+      "format_errors": [],
+      "paragraphs": 7,
+      "paragraphs_found": 6,
+      "text_word_recall": 0.8922,
+      "missing_paragraphs": [
+        "BIÊN BẢN SỰ CỐ THIẾT BỊ"
+      ],
+      "table_rows": 4,
+      "table_rows_exact": 4,
+      "table_row_similarity": 1.0,
+      "table_rows_wrong": [],
+      "extra_table_chunks": 0,
+      "category": "pdf_scan",
+      "seconds": 8.076
+    },
+    "scan_huong_dan_van_hanh.pdf": {
+      "format_errors": [],
+      "paragraphs": 7,
+      "paragraphs_found": 7,
+      "text_word_recall": 1.0,
+      "missing_paragraphs": [],
+      "table_rows": 4,
+      "table_rows_exact": 3,
+      "table_row_similarity": 0.9986,
+      "table_rows_wrong": [
+        "Thông số là Dòng điện động cơ, giá trị bình thường là 45 A, ngưỡng cản"
+      ],
+      "extra_table_chunks": 0,
+      "category": "pdf_scan",
+      "seconds": 12.223
+    },
+    "thong_so_may.xlsx": {
+      "format_errors": [],
+      "table_rows": 6,
+      "table_rows_exact": 6,
+      "table_row_similarity": 1.0,
+      "table_rows_wrong": [],
+      "extra_table_chunks": 0,
+      "category": "excel",
+      "seconds": 0.017
+    }
+  }
+}

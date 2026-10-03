@@ -1,0 +1,66 @@
+[
+  {
+    "chunk_id": "doc004_chunk001",
+    "text": "BIEN BAN SỰ CO THIET BỊ\nNgày 12 thang 3 năm 2025, lúc 9 gid 40 phút, may CNC số 3 tại xưởng gia công dừng đột ngột và hiển thị mã lỗi AL-214 trên màn hình điều khiển.",
+    "source_file": "scan_bien_ban_su_co.pdf",
+    "location": "Trang 1",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc004_chunk002",
+    "text": "Mô tả sự cố\nNgười vận hành nghe tiếng kêu bất thường từ trục chính trước khi máy dừng. Kiểm tra sơ bộ cho thấy nhiệt độ ổ bi trục chính tăng lên 78 độ C, vượt ngưỡng cho phép là 65 độ C.",
+    "source_file": "scan_bien_ban_su_co.pdf",
+    "location": "Trang 1",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc004_chunk003",
+    "text": "Các bước đã xử lý",
+    "source_file": "scan_bien_ban_su_co.pdf",
+    "location": "Trang 1",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc004_chunk004",
+    "text": "Thời gian là 09:45, hành động là Ngắt nguồn và khóa máy, người thực hiện là Trưởng ca.",
+    "source_file": "scan_bien_ban_su_co.pdf",
+    "location": "Trang 1, bảng 1, hàng 1",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc004_chunk005",
+    "text": "Thời gian là 10:10, hành động là Kiểm tra ổ bi trục chính, người thực hiện là Kỹ sư cơ khí.",
+    "source_file": "scan_bien_ban_su_co.pdf",
+    "location": "Trang 1, bảng 1, hàng 2",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc004_chunk006",
+    "text": "Thời gian là 11:30, hành động là Thay ổ bi và bơm mỡ, người thực hiện là Kỹ thuật viên.",
+    "source_file": "scan_bien_ban_su_co.pdf",
+    "location": "Trang 1, bảng 1, hàng 3",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc004_chunk007",
+    "text": "Thời gian là 14:00, hành động là Chạy thử không tải, người thực hiện là Kỹ sư cơ khí.",
+    "source_file": "scan_bien_ban_su_co.pdf",
+    "location": "Trang 1, bảng 1, hàng 4",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc004_chunk008",
+    "text": "Kết luận\nNguyên nhân là do thiếu mỡ bôi trơn ổ bi. Đề xuất bổ sung hạng mục kiểm tra mỡ trục chính vào lịch bảo dưỡng hàng tuần.",
+    "source_file": "scan_bien_ban_su_co.pdf",
+    "location": "Trang 1",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  }
+]

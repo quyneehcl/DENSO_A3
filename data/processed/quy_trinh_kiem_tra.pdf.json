@@ -1,0 +1,82 @@
+[
+  {
+    "chunk_id": "doc003_chunk001",
+    "text": "QUY TRÌNH KIỂM TRA CHẤT LƯỢNG ĐẦU CA\nQuy trình áp dụng cho tất cả các dây chuyền lắp ráp linh kiện điện tử. Trưởng ca có trách nhiệm đảm bảo việc kiểm tra được hoàn thành trong 15 phút đầu tiên của ca làm việc.",
+    "source_file": "quy_trinh_kiem_tra.pdf",
+    "location": "Trang 1",
+    "doc_type": "pdf_text",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc003_chunk002",
+    "text": "Bước 1: Kiểm tra thiết bị\nKiểm tra theo bảng dưới đây. Nếu bất kỳ hạng mục nào không đạt tiêu chuẩn, dừng dây chuyền và báo cho bộ phận bảo trì.",
+    "source_file": "quy_trinh_kiem_tra.pdf",
+    "location": "Trang 1",
+    "doc_type": "pdf_text",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc003_chunk003",
+    "text": "Thiết bị là Máy hàn reflow, hạng mục kiểm tra là Nhiệt độ vùng 1, tiêu chuẩn là 150 ± 5 độ C.",
+    "source_file": "quy_trinh_kiem_tra.pdf",
+    "location": "Trang 1, bảng 1, hàng 1",
+    "doc_type": "pdf_text",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc003_chunk004",
+    "text": "Thiết bị là Máy hàn reflow, hạng mục kiểm tra là Nhiệt độ vùng peak, tiêu chuẩn là 245 ± 3 độ C.",
+    "source_file": "quy_trinh_kiem_tra.pdf",
+    "location": "Trang 1, bảng 1, hàng 2",
+    "doc_type": "pdf_text",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc003_chunk005",
+    "text": "Thiết bị là Máy hàn reflow, hạng mục kiểm tra là Tốc độ băng tải, tiêu chuẩn là 0.9 m/phút.",
+    "source_file": "quy_trinh_kiem_tra.pdf",
+    "location": "Trang 1, bảng 1, hàng 3",
+    "doc_type": "pdf_text",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc003_chunk006",
+    "text": "Thiết bị là Máy gắp đặt linh kiện, hạng mục kiểm tra là Áp suất khí nén, tiêu chuẩn là 0.5 MPa.",
+    "source_file": "quy_trinh_kiem_tra.pdf",
+    "location": "Trang 1, bảng 1, hàng 4",
+    "doc_type": "pdf_text",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc003_chunk007",
+    "text": "Thiết bị là Máy gắp đặt linh kiện, hạng mục kiểm tra là Độ chính xác đặt, tiêu chuẩn là Sai lệch dưới 0.05 mm.",
+    "source_file": "quy_trinh_kiem_tra.pdf",
+    "location": "Trang 1, bảng 1, hàng 5",
+    "doc_type": "pdf_text",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc003_chunk008",
+    "text": "Thiết bị là Máy kiểm tra AOI, hạng mục kiểm tra là Mẫu chuẩn, tiêu chuẩn là Phát hiện đủ 10/10 lỗi mẫu.",
+    "source_file": "quy_trinh_kiem_tra.pdf",
+    "location": "Trang 1, bảng 1, hàng 6",
+    "doc_type": "pdf_text",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc003_chunk009",
+    "text": "Bước 2: Kiểm tra vật tư\nĐối chiếu mã linh kiện trên cuộn tape với danh sách BOM của sản phẩm đang chạy. Kiểm tra hạn sử dụng của kem hàn; kem hàn đã mở nắp quá 24 giờ phải được loại bỏ.\nNote: operators must sign the checklist in English and Vietnamese for export products.",
+    "source_file": "quy_trinh_kiem_tra.pdf",
+    "location": "Trang 1",
+    "doc_type": "pdf_text",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc003_chunk010",
+    "text": "Bước 3: Sản phẩm mẫu đầu ca\nChạy 5 sản phẩm mẫu, kiểm tra ngoại quan và đo điện. Chỉ khi cả 5 sản phẩm đạt yêu cầu mới được chạy sản xuất hàng loạt. Kết quả được ghi vào phiếu kiểm tra đầu ca.",
+    "source_file": "quy_trinh_kiem_tra.pdf",
+    "location": "Trang 1",
+    "doc_type": "pdf_text",
+    "language": "vi"
+  }
+]

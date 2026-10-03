@@ -1,0 +1,99 @@
+{
+  "paragraphs": [
+    "HƯỚNG DẪN BẢO TRÌ MÁY ÉP NHỰA MX-200",
+    "Tài liệu này hướng dẫn quy trình bảo trì định kỳ cho máy ép nhựa MX-200 đang vận hành tại xưởng sản xuất số 2. Người thực hiện bảo trì phải được đào tạo và có chứng chỉ vận hành hợp lệ.",
+    "1. Yêu cầu an toàn",
+    "Trước khi bảo trì, phải ngắt nguồn điện chính, treo biển cảnh báo và khóa cầu dao theo quy trình LOTO. Chờ ít nhất 30 phút để nhiệt độ xi lanh giảm xuống dưới 50 độ C trước khi tháo vỏ bảo vệ.",
+    "Luôn mang găng tay chịu nhiệt, kính bảo hộ và giày an toàn. Không được làm việc một mình khi kiểm tra hệ thống thủy lực có áp suất cao.",
+    "2. Lịch bảo dưỡng định kỳ",
+    "Bảng dưới đây liệt kê các hạng mục bảo dưỡng, chu kỳ thực hiện và bộ phận chịu trách nhiệm. Các hạng mục quá hạn phải được báo cáo cho trưởng ca ngay trong ngày.",
+    "3. Xử lý dầu thải",
+    "Dầu thủy lực đã qua sử dụng phải được chứa trong thùng kín có dán nhãn chất thải nguy hại. Không được đổ dầu thải xuống cống hoặc trộn lẫn với chất thải sinh hoạt. Bộ phận môi trường sẽ thu gom dầu thải vào thứ sáu hàng tuần và ghi nhận khối lượng vào sổ theo dõi chất thải. Mọi sự cố rò rỉ dầu trong quá trình thay thế phải được thấm hút ngay bằng vật liệu chuyên dụng, sau đó báo cáo cho bộ phận an toàn để lập biên bản. Trường hợp dầu tràn ra sàn với diện tích lớn hơn một mét vuông, phải khoanh vùng và dừng hoạt động của các máy lân cận cho đến khi khu vực được làm sạch hoàn toàn và được trưởng ca xác nhận an toàn.",
+    "4. Ghi chép sau bảo trì",
+    "Sau mỗi lần bảo trì, kỹ thuật viên ghi kết quả vào phiếu bảo trì, bao gồm ngày thực hiện, hạng mục, linh kiện đã thay và chữ ký xác nhận. Phiếu bảo trì được lưu trữ tối thiểu ba năm."
+  ],
+  "tables": [
+    {
+      "headers": [
+        "Hạng mục",
+        "Chu kỳ",
+        "Người thực hiện",
+        "Ghi chú"
+      ],
+      "rows": [
+        [
+          "Kiểm tra mức dầu thủy lực",
+          "Hàng ngày",
+          "Công nhân vận hành",
+          "Bổ sung dầu ISO VG46"
+        ],
+        [
+          "Vệ sinh lưới lọc dầu",
+          "Hàng tuần",
+          "Kỹ thuật viên",
+          "Thay nếu rách"
+        ],
+        [
+          "Bôi trơn thanh dẫn hướng",
+          "Hàng tuần",
+          "Kỹ thuật viên",
+          "Dùng mỡ EP2"
+        ],
+        [
+          "Kiểm tra cảm biến nhiệt",
+          "Hàng tháng",
+          "Kỹ sư điện",
+          "Sai số cho phép 2 độ C"
+        ],
+        [
+          "Kiểm tra áp suất kẹp khuôn",
+          "Hàng tháng",
+          "Kỹ sư cơ khí",
+          "Áp suất 140 bar"
+        ],
+        [
+          "Thay dầu thủy lực",
+          "6 tháng",
+          "Kỹ thuật viên",
+          "Khoảng 200 lít"
+        ],
+        [
+          "Hiệu chuẩn bộ điều khiển PLC",
+          "12 tháng",
+          "Nhà cung cấp",
+          "Lưu biên bản hiệu chuẩn"
+        ],
+        [
+          "Kiểm tra vít xoắn và xi lanh",
+          "12 tháng",
+          "Kỹ sư cơ khí",
+          "Đo độ mòn bằng thước cặp"
+        ],
+        [
+          "Kiểm tra van an toàn",
+          "12 tháng",
+          "Kỹ sư cơ khí",
+          "Thử ở áp suất 160 bar"
+        ],
+        [
+          "Vệ sinh tủ điện",
+          "3 tháng",
+          "Kỹ sư điện",
+          "Dùng khí nén khô"
+        ],
+        [
+          "Kiểm tra dây curoa quạt",
+          "3 tháng",
+          "Kỹ thuật viên",
+          "Thay nếu nứt"
+        ],
+        [
+          "Kiểm tra bơm làm mát",
+          "Hàng tháng",
+          "Kỹ thuật viên",
+          "Lưu lượng tối thiểu 20 lít/phút"
+        ]
+      ]
+    }
+  ]
+}

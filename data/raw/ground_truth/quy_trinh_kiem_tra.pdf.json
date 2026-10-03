@@ -1,0 +1,54 @@
+{
+  "paragraphs": [
+    "QUY TRÌNH KIỂM TRA CHẤT LƯỢNG ĐẦU CA",
+    "Quy trình áp dụng cho tất cả các dây chuyền lắp ráp linh kiện điện tử. Trưởng ca có trách nhiệm đảm bảo việc kiểm tra được hoàn thành trong 15 phút đầu tiên của ca làm việc.",
+    "Bước 1: Kiểm tra thiết bị",
+    "Kiểm tra theo bảng dưới đây. Nếu bất kỳ hạng mục nào không đạt tiêu chuẩn, dừng dây chuyền và báo cho bộ phận bảo trì.",
+    "Bước 2: Kiểm tra vật tư",
+    "Đối chiếu mã linh kiện trên cuộn tape với danh sách BOM của sản phẩm đang chạy. Kiểm tra hạn sử dụng của kem hàn; kem hàn đã mở nắp quá 24 giờ phải được loại bỏ.",
+    "Note: operators must sign the checklist in English and Vietnamese for export products.",
+    "Bước 3: Sản phẩm mẫu đầu ca",
+    "Chạy 5 sản phẩm mẫu, kiểm tra ngoại quan và đo điện. Chỉ khi cả 5 sản phẩm đạt yêu cầu mới được chạy sản xuất hàng loạt. Kết quả được ghi vào phiếu kiểm tra đầu ca."
+  ],
+  "tables": [
+    {
+      "headers": [
+        "Thiết bị",
+        "Hạng mục kiểm tra",
+        "Tiêu chuẩn"
+      ],
+      "rows": [
+        [
+          "Máy hàn reflow",
+          "Nhiệt độ vùng 1",
+          "150 ± 5 độ C"
+        ],
+        [
+          "Máy hàn reflow",
+          "Nhiệt độ vùng peak",
+          "245 ± 3 độ C"
+        ],
+        [
+          "Máy hàn reflow",
+          "Tốc độ băng tải",
+          "0.9 m/phút"
+        ],
+        [
+          "Máy gắp đặt linh kiện",
+          "Áp suất khí nén",
+          "0.5 MPa"
+        ],
+        [
+          "Máy gắp đặt linh kiện",
+          "Độ chính xác đặt",
+          "Sai lệch dưới 0.05 mm"
+        ],
+        [
+          "Máy kiểm tra AOI",
+          "Mẫu chuẩn",
+          "Phát hiện đủ 10/10 lỗi mẫu"
+        ]
+      ]
+    }
+  ]
+}

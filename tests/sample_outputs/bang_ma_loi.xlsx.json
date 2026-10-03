@@ -1,0 +1,90 @@
+[
+  {
+    "chunk_id": "doc001_chunk001",
+    "text": "Tên linh kiện là Cảm biến nhiệt độ; mã lỗi là E01; nguyên nhân là Đứt dây cảm biến; cách xử lý là Kiểm tra và nối lại dây, thay cảm biến nếu cần.",
+    "source_file": "bang_ma_loi.xlsx",
+    "location": "Máy ép, hàng 4",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc001_chunk002",
+    "text": "Tên linh kiện là Cảm biến nhiệt độ, mã lỗi là E02, nguyên nhân là Nhiệt độ vượt ngưỡng, cách xử lý là Kiểm tra quạt làm mát và bộ gia nhiệt.",
+    "source_file": "bang_ma_loi.xlsx",
+    "location": "Máy ép, hàng 5",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc001_chunk003",
+    "text": "Tên linh kiện là Động cơ servo; mã lỗi là E10; nguyên nhân là Quá tải động cơ; cách xử lý là Giảm tải, kiểm tra cơ cấu truyền động.",
+    "source_file": "bang_ma_loi.xlsx",
+    "location": "Máy ép, hàng 6",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc001_chunk004",
+    "text": "Tên linh kiện là Động cơ servo; mã lỗi là E11; nguyên nhân là Lỗi encoder; cách xử lý là Kiểm tra cáp encoder, reset driver.",
+    "source_file": "bang_ma_loi.xlsx",
+    "location": "Máy ép, hàng 7",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc001_chunk005",
+    "text": "Tên linh kiện là Động cơ servo, mã lỗi là E12, nguyên nhân là Quá áp DC bus, cách xử lý là Kiểm tra điện trở xả.",
+    "source_file": "bang_ma_loi.xlsx",
+    "location": "Máy ép, hàng 8",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc001_chunk006",
+    "text": "Tên linh kiện là Bơm thủy lực, mã lỗi là H20, nguyên nhân là Áp suất thấp, cách xử lý là Kiểm tra mức dầu và lọc hút.",
+    "source_file": "bang_ma_loi.xlsx",
+    "location": "Máy ép, hàng 9",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc001_chunk007",
+    "text": "Tên linh kiện là Bơm thủy lực, mã lỗi là H21, nguyên nhân là Nhiệt độ dầu cao, cách xử lý là Kiểm tra bộ làm mát dầu.",
+    "source_file": "bang_ma_loi.xlsx",
+    "location": "Máy ép, hàng 10",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc001_chunk008",
+    "text": "Tên linh kiện là Bộ điều khiển PLC, mã lỗi là P30, nguyên nhân là Mất kết nối mạng, cách xử lý là Kiểm tra cáp Ethernet và địa chỉ IP.",
+    "source_file": "bang_ma_loi.xlsx",
+    "location": "Máy ép, hàng 11",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc001_chunk009",
+    "text": "Mã lỗi là R-001; tên lỗi là Va chạm; hiện tượng là Dừng khẩn cấp; cách xử lý là Kiểm tra vùng làm việc, chạy lại chương trình.",
+    "source_file": "bang_ma_loi.xlsx",
+    "location": "Robot, hàng 2",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc001_chunk010",
+    "text": "Mã lỗi là R-002, tên lỗi là Mất điểm gốc, hiện tượng là Robot không di chuyển, cách xử lý là Thực hiện lại thao tác về gốc.",
+    "source_file": "bang_ma_loi.xlsx",
+    "location": "Robot, hàng 3",
+    "doc_type": "excel_table",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc001_chunk011",
+    "text": "Mã lỗi là R-015, tên lỗi là Pin encoder yếu, hiện tượng là Cảnh báo trên teach pendant, cách xử lý là Thay pin trong vòng 7 ngày.",
+    "source_file": "bang_ma_loi.xlsx",
+    "location": "Robot, hàng 4",
+    "doc_type": "excel_table",
+    "language": "vi"
+  }
+]

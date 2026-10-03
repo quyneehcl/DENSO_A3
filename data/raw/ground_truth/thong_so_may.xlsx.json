@@ -1,0 +1,77 @@
+{
+  "paragraphs": [],
+  "tables": [
+    {
+      "sheet": "Máy ép nhựa",
+      "first_row": 3,
+      "headers": [
+        "Model",
+        "Thông số điện - Điện áp (V)",
+        "Thông số điện - Tần số (Hz)",
+        "Thông số điện - Công suất (kW)",
+        "Lực kẹp (tấn)",
+        "Ngày lắp đặt"
+      ],
+      "rows": [
+        [
+          "MX-200",
+          "380",
+          "50",
+          "22",
+          "200",
+          "2021-05-14"
+        ],
+        [
+          "MX-350",
+          "380",
+          "50",
+          "37",
+          "350",
+          "2022-08-02"
+        ],
+        [
+          "MX-500",
+          "380",
+          "50",
+          "55.5",
+          "500",
+          "2023-01-20"
+        ]
+      ]
+    },
+    {
+      "sheet": "Máy CNC",
+      "first_row": 2,
+      "headers": [
+        "Mã máy",
+        "Loại máy",
+        "Tốc độ trục chính (vòng/phút)",
+        "Hành trình (mm)",
+        "Bộ điều khiển"
+      ],
+      "rows": [
+        [
+          "CNC-01",
+          "Phay đứng",
+          "12000",
+          "800 x 500 x 500",
+          "Fanuc 0i-MF"
+        ],
+        [
+          "CNC-02",
+          "Tiện",
+          "4500",
+          "Ø300 x 600",
+          "Fanuc 0i-TF"
+        ],
+        [
+          "CNC-03",
+          "Phay đứng",
+          "15000",
+          "1000 x 600 x 600",
+          "Siemens 828D"
+        ]
+      ]
+    }
+  ]
+}

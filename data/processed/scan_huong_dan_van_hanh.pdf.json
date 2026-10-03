@@ -1,0 +1,66 @@
+[
+  {
+    "chunk_id": "doc005_chunk001",
+    "text": "HƯỚNG DẪN VẬN HÀNH MÁY NÉN KHÍ\nMáy nén khí trục vít cung cấp khí nén cho toàn bộ xưởng lắp ráp. Áp suất làm việc tiêu chuẩn là 7 bar, áp suất tối đa không vượt quá 8 bar.",
+    "source_file": "scan_huong_dan_van_hanh.pdf",
+    "location": "Trang 1",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc005_chunk002",
+    "text": "Khởi động máy\nKiểm tra mức dầu qua kính thăm dầu, mức dầu phải nằm giữa hai vạch đỏ. Mở van xả nước ngưng trong bình chứa, sau đó đóng lại. Nhấn nút khởi động và theo dõi áp suất tăng dần trên đồng hồ.",
+    "source_file": "scan_huong_dan_van_hanh.pdf",
+    "location": "Trang 1",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc005_chunk003",
+    "text": "Bảng thông số giám sát",
+    "source_file": "scan_huong_dan_van_hanh.pdf",
+    "location": "Trang 1",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc005_chunk004",
+    "text": "Thông số là Áp suất đầu ra, giá trị bình thường là 7 bar, ngưỡng cảnh báo là Trên 8 bar.",
+    "source_file": "scan_huong_dan_van_hanh.pdf",
+    "location": "Trang 1, bảng 1, hàng 1",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc005_chunk005",
+    "text": "Thông số là Nhiệt độ dầu, giá trị bình thường là 80 độ C, ngưỡng cảnh báo là Trên 105 độ C.",
+    "source_file": "scan_huong_dan_van_hanh.pdf",
+    "location": "Trang 1, bảng 1, hàng 2",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc005_chunk006",
+    "text": "Thông số là Dòng điện động cơ, giá trị bình thường là 45A, ngưỡng cảnh báo là Trên 52 A.",
+    "source_file": "scan_huong_dan_van_hanh.pdf",
+    "location": "Trang 1, bảng 1, hàng 3",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc005_chunk007",
+    "text": "Thông số là Chênh áp lọc tách dầu, giá trị bình thường là 0.3 bar, ngưỡng cảnh báo là Trên 1 bar.",
+    "source_file": "scan_huong_dan_van_hanh.pdf",
+    "location": "Trang 1, bảng 1, hàng 4",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  },
+  {
+    "chunk_id": "doc005_chunk008",
+    "text": "Dừng máy\nNhấn nút dừng, máy sẽ chạy không tải khoảng 30 giây trước khi dừng hẳn. Không ngắt nguồn điện chính khi máy đang trong chu trình dừng.",
+    "source_file": "scan_huong_dan_van_hanh.pdf",
+    "location": "Trang 1-2",
+    "doc_type": "pdf_scan",
+    "language": "vi"
+  }
+]

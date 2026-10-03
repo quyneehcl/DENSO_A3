@@ -1,0 +1,95 @@
+{
+  "paragraphs": [],
+  "tables": [
+    {
+      "sheet": "Máy ép",
+      "first_row": 4,
+      "headers": [
+        "Tên linh kiện",
+        "Mã lỗi",
+        "Nguyên nhân",
+        "Cách xử lý"
+      ],
+      "rows": [
+        [
+          "Cảm biến nhiệt độ",
+          "E01",
+          "Đứt dây cảm biến",
+          "Kiểm tra và nối lại dây, thay cảm biến nếu cần"
+        ],
+        [
+          "Cảm biến nhiệt độ",
+          "E02",
+          "Nhiệt độ vượt ngưỡng",
+          "Kiểm tra quạt làm mát và bộ gia nhiệt"
+        ],
+        [
+          "Động cơ servo",
+          "E10",
+          "Quá tải động cơ",
+          "Giảm tải, kiểm tra cơ cấu truyền động"
+        ],
+        [
+          "Động cơ servo",
+          "E11",
+          "Lỗi encoder",
+          "Kiểm tra cáp encoder, reset driver"
+        ],
+        [
+          "Động cơ servo",
+          "E12",
+          "Quá áp DC bus",
+          "Kiểm tra điện trở xả"
+        ],
+        [
+          "Bơm thủy lực",
+          "H20",
+          "Áp suất thấp",
+          "Kiểm tra mức dầu và lọc hút"
+        ],
+        [
+          "Bơm thủy lực",
+          "H21",
+          "Nhiệt độ dầu cao",
+          "Kiểm tra bộ làm mát dầu"
+        ],
+        [
+          "Bộ điều khiển PLC",
+          "P30",
+          "Mất kết nối mạng",
+          "Kiểm tra cáp Ethernet và địa chỉ IP"
+        ]
+      ]
+    },
+    {
+      "sheet": "Robot",
+      "first_row": 2,
+      "headers": [
+        "Mã lỗi",
+        "Tên lỗi",
+        "Hiện tượng",
+        "Cách xử lý"
+      ],
+      "rows": [
+        [
+          "R-001",
+          "Va chạm",
+          "Dừng khẩn cấp",
+          "Kiểm tra vùng làm việc, chạy lại chương trình"
+        ],
+        [
+          "R-002",
+          "Mất điểm gốc",
+          "Robot không di chuyển",
+          "Thực hiện lại thao tác về gốc"
+        ],
+        [
+          "R-015",
+          "Pin encoder yếu",
+          "Cảnh báo trên teach pendant",
+          "Thay pin trong vòng 7 ngày"
+        ]
+      ]
+    }
+  ]
+}
