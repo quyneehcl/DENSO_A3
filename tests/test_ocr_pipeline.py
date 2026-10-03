@@ -94,3 +94,20 @@ def test_tesseract_scan_end_to_end():
 
 def test_backend_none_skips_scans():
     assert ocr_pipeline.get_backend("none") is None
+
+
+def test_failed_backend_is_not_reloaded(monkeypatch):
+    calls = []
+
+    def boom(**kw):
+        calls.append(1)
+        raise ImportError("libtorch_cuda.so: undefined symbol")
+
+    monkeypatch.setattr(ocr_pipeline, "PaddleOCRVLBackend", boom)
+    monkeypatch.setattr(ocr_pipeline, "_FAILED", {})
+    monkeypatch.setattr(ocr_pipeline, "_BACKENDS", {})
+    with pytest.raises(ImportError):
+        ocr_pipeline.get_backend("paddle_vl")
+    with pytest.raises(RuntimeError, match="undefined symbol"):
+        ocr_pipeline.get_backend("paddle_vl")
+    assert len(calls) == 1

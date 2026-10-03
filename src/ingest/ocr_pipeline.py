@@ -407,6 +407,7 @@ def _clean_ocr_text(text: str) -> str:
 
 # =============================================================================== backend selection
 _BACKENDS: dict[str, OCRBackend] = {}
+_FAILED: dict[str, Exception] = {}  # a backend that failed to load is not retried (re-import is unsafe)
 
 
 def _paddle_gpu_available() -> bool:
@@ -429,6 +430,8 @@ def get_backend(name: str = "auto", **kwargs) -> OCRBackend | None:
         return None
     if name in _BACKENDS:
         return _BACKENDS[name]
+    if name in _FAILED:
+        raise RuntimeError(f"OCR backend {name!r} failed to load earlier: {_FAILED[name]}") from _FAILED[name]
     if name == "auto":
         if _paddle_gpu_available():
             try:
@@ -440,12 +443,14 @@ def get_backend(name: str = "auto", **kwargs) -> OCRBackend | None:
             log.info("PaddleOCR-VL/GPU not available -> using Tesseract")
         backend = _BACKENDS["auto"] = get_backend("tesseract", **kwargs)
         return backend
-    if name == "paddle_vl":
-        backend = PaddleOCRVLBackend(**kwargs)
-    elif name == "tesseract":
-        backend = TesseractBackend(**kwargs)
-    else:
+    factories = {"paddle_vl": PaddleOCRVLBackend, "tesseract": TesseractBackend}
+    if name not in factories:
         raise ValueError(f"unknown OCR backend {name!r} (auto|paddle_vl|tesseract|none)")
+    try:
+        backend = factories[name](**kwargs)
+    except Exception as e:
+        _FAILED[name] = e
+        raise
     _BACKENDS[name] = backend
     return backend
 
